@@ -1,0 +1,17 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: smartshield-verify-chainsmart-id-gateway
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+    - hosts:
+      - "verify.smartshield.dev.chainsmart.id"
+      port:
+        name: https
+        protocol: HTTPS
+        number: 443
+      tls:
+        mode: SIMPLE
+        credentialName: smartshield-verify-chainsmart-id

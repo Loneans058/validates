@@ -1,0 +1,22 @@
+{
+  "counter": "Penghitung",
+  "close": "Tutup",
+  "desc": "Deskripsi",
+  "docmatch": "Verifikasi sertifikat kapal berhasil",
+  "docnotmatch": "Verifikasi sertifikat kapal gagal",
+  "docverify": "Verifikasi Sertifikat Kapal",
+  "email": "Email",
+  "errorOccured": "Hasil verifikasi sertifikat kapal akan dikirimkan melalui email ke {email}",
+  "errorInputFieldEmpty": "Kolom input tidak boleh kosong",
+  "errorEmailInvalid": "Email tidak valid",
+  "errorRecordIdNotFound": "Record ID tidak valid",
+  "name": "Nama",
+  "notvalid": "Sertifikat kapal tidak valid",
+  "powered": "Powered by",
+  "recordId": "Record ID",
+  "resultEmail": "Hasil verifikasi akan dikirim melalui email ke {email}",
+  "resutlverif": "Hasil Verifikasi",
+  "requestTimout": "Request Timout",
+  "save": "Simpan",
+  "statusverifile": "Status Verifikasi"
+}

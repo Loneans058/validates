@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: smartshieldverify-deployment
+  labels:
+    app: smartshieldverify
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: smartshieldverify
+  template:
+    metadata:
+      labels:
+        app: smartshieldverify
+    spec:
+      imagePullSecrets:
+        - name: chainsmart-pull-image-secret
+      containers:
+      - name: smartshieldverify
+        image: chainsmart/smartshieldverify:v0.0.1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        env:
+          - name: ENV
+            value: dev
+          - name: URL
+            value: https://smartshield.api.dev.chainsmart.id/api/
+          - name: SSO_URL
+            value: https://sso.dev.chainsmart.id/realms/kpk-smartshield
+          - name: SSO_CLIENT_ID
+            value: smartshield-app-dev
+        resources:
+          requests:
+            memory: "5Mi"
+            cpu: "10m"
+          limits:
+            memory: "500Mi"
+            cpu: "500m"
